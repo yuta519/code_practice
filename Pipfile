@@ -5,6 +5,9 @@ name = "pypi"
 
 [packages]
 black = "*"
+pep8 = "*"
+flake8 = "*"
+autopep8 = "*"
 
 [dev-packages]
 
