@@ -19,10 +19,8 @@ Constraints:
 1 <= startIndices[i] <= endIndices[i] <= n
 Each character or s is either * or |
 """
-
-import sys
-
-
+# Refered answers
+# O(N) solution
 def cntitems2(items: str, startIndices: list[int], endIndices: list[int]) -> list[int]:
     length = len(items)
 
@@ -65,7 +63,8 @@ def cntitems2(items: str, startIndices: list[int], endIndices: list[int]) -> lis
     return answer
 
 
-def cntitems(items: str, startIndices: list[int], endIndices: list[int]) -> list[int]:
+# Own answer
+def count_items(items: str, startIndices: list[int], endIndices: list[int]) -> list[int]:
     pipe_idx: list[int] = []
     answers = []
     for idx, item in enumerate(items):
@@ -94,6 +93,6 @@ if __name__ == '__main__':
     print(cntitems2("*|**|*|**|****|*",[4,1,4],[8,16,11]))  # [1, 9, 3]
     print(cntitems2("*****|*****",[1,4,1,7],[5,8,11,9]))  # [0, 0, 0, 0]
 
-    print(cntitems("|**|*|*", [1, 1, 2], [5, 7, 7]))  # [2, 3, 1]
-    print(cntitems("*|**|*|**|****|*", [4, 1, 4], [8, 16, 11]))  # [1, 9, 3]
-    print(cntitems("*****|*****",[1,4,1,7],[5,8,11,9]))  # [0, 0, 0, 0]
+    print(count_items("|**|*|*", [1, 1, 2], [5, 7, 7]))  # [2, 3, 1]
+    print(count_items("*|**|*|**|****|*", [4, 1, 4], [8, 16, 11]))  # [1, 9, 3]
+    print(count_items("*****|*****",[1,4,1,7],[5,8,11,9]))  # [0, 0, 0, 0]
